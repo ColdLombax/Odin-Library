@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Navbar from './components/Navigation/Navbar';
+import Grid from './components/BookContainer/Grid';
 
 const myLibrary = [
   {
@@ -13,6 +14,7 @@ const myLibrary = [
     pages: 472,
     description: 'JavaScript lies at the heart of almost every modern web application, from social apps like Twitter to browser-based game frameworks like Phaser and Babylon. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.',
     website: 'http://eloquentjavascript.net/',
+    cover: 'https://images-na.ssl-images-amazon.com/images/I/91asIC1fRwL.jpg',
   },
   {
     isbn: '978-1491943533',
@@ -71,12 +73,11 @@ const myLibrary = [
   },
 ];
 
-console.log(myLibrary);
-
 export default function App() {
   return (
     <>
       <Navbar />
+      <Grid data={myLibrary} />
     </>
   );
 }
